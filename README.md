@@ -13,12 +13,12 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/markesdo/ndu-coding-2026
 ## In 5 Schritten zur laufenden App
 
 1. **Eigenes Repo anlegen:** oben rechts auf **„Use this template“ → „Create a new repository“**. Name: dein Projektname (kleine Buchstaben, mehrere Wörter mit Bindestrich, z. B. `mensa-board`), Owner: dein GitHub-Account, Public. → „Create repository“.
-2. **Repo öffnen:** am Mac mit dem Befehl oben, unter Windows in VS Code über *Source Control → Clone Repository → Clone from GitHub*, danach im Terminal `npm install`.
+2. **Repo öffnen:** am Mac mit dem Befehl oben – er installiert auch die Pakete. Unter Windows zuerst [Setup → Lokal von Hand](https://ndu.datamonkeys.ai/setup#lokal-hand) (Git mit Name und E-Mail, Node.js, Claude Code), dann in VS Code *Source Control → Clone Repository → Clone from GitHub* und im Terminal `npm install`.
 3. **Claude starten:** im Terminal von VS Code `claude` eintippen. Beim ersten Mal auf diesem Laptop meldest du dich mit deinem Claude-Account (Claude Pro) an.
 4. **App starten:** in Claude Code eintippen (ja, auf Deutsch, in ganzen Sätzen):
    > Starte die App und sag mir, wie ich sie im Browser öffne.
 
-   Oder klassisch in einem zweiten Terminal: `npm run dev`, dann `http://localhost:3000` öffnen.
+   Oder klassisch in einem zweiten Terminal: `npm run dev`, dann die Adresse öffnen, die im Terminal steht (meist `http://localhost:3000`).
 5. **Produkt-Brief schreiben:**
    > /ndu-idee
 
@@ -35,7 +35,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/markesdo/ndu-coding-2026
 | `docs/HILFE-ANFRAGE.md` | So holst du dir Hilfe in Teams |
 | `CLAUDE.md` | Die Spielregeln für Claude in diesem Projekt (lies sie – sie sind auch deine) |
 | `.claude/commands/` | Eigene Befehle: `/ndu-idee`, `/ndu-brainstorm`, `/ndu-explain`, `/ndu-check`, `/ndu-commit`, `/ndu-beratung` |
-| `.devcontainer/` | Das Rezept für deine Codespace-Umgebung (nicht anfassen) |
+| `.devcontainer/` | Rezept für einen GitHub Codespace – im Kurs nicht mehr nötig (nicht anfassen; wer doch einen startet, stoppt ihn danach unter GitHub → Codespaces) |
 
 ## Die wichtigsten Befehle
 

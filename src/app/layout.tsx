@@ -4,8 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: { default: "Leihbar", template: "%s – Leihbar" },
-  description: "Leihen statt kaufen – Dinge am Campus anbieten, finden, anfragen.",
+  title: { default: "Mein Projekt", template: "%s – Mein Projekt" },
+  description: "Ein Produkt aus dem Kurs „Programmieren mit AI“ an der NDU.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

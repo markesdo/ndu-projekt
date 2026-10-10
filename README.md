@@ -1,17 +1,19 @@
-# Leihbar — NDU Coding 2026
+# Mein Projekt — NDU Coding 2026
 
-Dein Startpunkt für den Kurs **„Programmieren mit AI“** (MSc Management by Innovation, NDU).
+Die Vorlage für dein **eigenes Produkt** im Kurs **„Programmieren mit AI“** (MSc Management by Innovation, NDU). Wie die Kursvorlage mit Leihbar, nur ohne das Übungsprodukt: leere Startseite, leerer Backlog. Anleitung: [Neues Projekt starten](https://ndu.datamonkeys.ai/neues-projekt).
 Du musst **nichts installieren.** Alles läuft im Browser.
 Lokal auf dem eigenen Laptop arbeiten statt im Codespace (ab Tag 2): Anleitung unter [Setup → Lokal](https://ndu.datamonkeys.ai/setup#lokal).
 Am Mac geht das mit einem Befehl im Terminal – was er tut, steht in [`setup-mac.sh`](setup-mac.sh):
 
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/markesdo/ndu-coding-2026/main/setup-mac.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/markesdo/ndu-coding-2026/main/setup-mac.sh)" _ NAME-DEINES-REPOS
 ```
+
+`NAME-DEINES-REPOS` durch den Namen deines Repos ersetzen – ohne ihn holt das Skript Leihbar.
 
 ## In 5 Schritten zur laufenden App
 
-1. **Eigenes Repo anlegen:** oben rechts auf **„Use this template“ → „Create a new repository“**. Name: `leihbar`, Owner: dein GitHub-Account, Public. → „Create repository“.
+1. **Eigenes Repo anlegen:** oben rechts auf **„Use this template“ → „Create a new repository“**. Name: dein Projektname (kleine Buchstaben, mehrere Wörter mit Bindestrich, z. B. `mensa-board`), Owner: dein GitHub-Account, Public. → „Create repository“.
 2. **Codespace starten:** in deinem neuen Repo auf den grünen Button **„Code“ → Tab „Codespaces“ → „Create codespace on main“**. Das dauert beim ersten Mal 2–4 Minuten. Du landest in VS Code im Browser.
 3. **Claude Code anmelden:** unten im **Terminal** eintippen:
    ```
@@ -22,10 +24,10 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/markesdo/ndu-coding-2026
    > Starte die App und sag mir, wie ich sie im Browser öffne.
 
    Oder klassisch in einem zweiten Terminal: `npm run dev` – rechts öffnet sich automatisch eine Vorschau (Port 3000).
-5. **Erste Frage stellen:**
-   > /ndu-explain
+5. **Produkt-Brief schreiben:**
+   > /ndu-idee
 
-   Claude erklärt dir, was in diesem Projekt steckt – ohne Code.
+   Claude stellt dir ein paar Fragen zu deiner Idee, schreibt den Produkt-Brief und setzt deinen Produktnamen statt „Mein Projekt“ ein.
 
 ## Was ist hier drin?
 
@@ -33,12 +35,11 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/markesdo/ndu-coding-2026
 |---|---|
 | `src/app/` | Die Seiten der App (eine Mappe = eine URL) |
 | `src/components/` | Wiederverwendbare UI-Bausteine |
-| `src/data/gegenstaende.ts` | Beispiel-Gegenstände, bis die Datenbank kommt (Tag 2); Bilder in `public/gegenstaende/` |
 | `docs/PRODUKT-VORLAGE.md` | Vorlage für deinen Produkt-Brief (eine Seite, lebt mit dem Produkt) |
 | `docs/BACKLOG.md` | Issues mit Akzeptanzkriterien – deine Arbeitsliste |
 | `docs/HILFE-ANFRAGE.md` | So holst du dir Hilfe in Teams |
 | `CLAUDE.md` | Die Spielregeln für Claude in diesem Projekt (lies sie – sie sind auch deine) |
-| `.claude/commands/` | Eigene Befehle: `/ndu-neu`, `/ndu-idee`, `/ndu-brainstorm`, `/ndu-explain`, `/ndu-check`, `/ndu-commit`, `/ndu-beratung` |
+| `.claude/commands/` | Eigene Befehle: `/ndu-idee`, `/ndu-brainstorm`, `/ndu-explain`, `/ndu-check`, `/ndu-commit`, `/ndu-beratung` |
 | `.devcontainer/` | Das Rezept für deine Codespace-Umgebung (nicht anfassen) |
 
 ## Die wichtigsten Befehle
@@ -47,7 +48,6 @@ Diese Befehle sind **nicht in Claude Code eingebaut** – sie gehören zu diesem
 
 | Befehl | Wann |
 |---|---|
-| `/ndu-neu` | Du hast ein neues Repo aus der Vorlage angelegt und baust etwas anderes als Leihbar: Claude räumt Leihbar weg und setzt deinen Produktnamen ein |
 | `/ndu-idee` | Du startest ein neues Produkt: kurzes Interview, dann schreibt Claude den Produkt-Brief |
 | `/ndu-brainstorm` | Nach dem Brief: Claude schlägt Funktionen vor – auch solche, an die du nicht gedacht hast –, du entscheidest MVP / Später / Nein, dann schreibt Claude den Backlog |
 | `/ndu-explain` | Du willst verstehen, was gerade im Projekt passiert |

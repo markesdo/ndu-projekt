@@ -27,7 +27,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/markesdo/ndu-coding-2026
 5. **Produkt-Brief schreiben:**
    > /ndu-idee
 
-   Claude stellt dir ein paar Fragen zu deiner Idee, schreibt den Produkt-Brief und setzt deinen Produktnamen statt „Mein Projekt“ ein.
+   Claude stellt dir ein paar Fragen zu deiner Idee, schreibt den Produkt-Brief und setzt deinen Produktnamen ein.
 
 ## Was ist hier drin?
 

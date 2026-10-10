@@ -1,9 +1,8 @@
 # Mein Projekt — NDU Coding 2026
 
 Die Vorlage für dein **eigenes Produkt** im Kurs **„Programmieren mit AI“** (MSc Management by Innovation, NDU). Wie die Kursvorlage mit Leihbar, nur ohne das Übungsprodukt: leere Startseite, leerer Backlog. Anleitung: [Neues Projekt starten](https://ndu.datamonkeys.ai/neues-projekt).
-Du musst **nichts installieren.** Alles läuft im Browser.
-Lokal auf dem eigenen Laptop arbeiten statt im Codespace (ab Tag 2): Anleitung unter [Setup → Lokal](https://ndu.datamonkeys.ai/setup#lokal).
-Am Mac geht das mit einem Befehl im Terminal – was er tut, steht in [`setup-mac.sh`](setup-mac.sh):
+Du arbeitest lokal auf deinem Laptop – eingerichtet wie unter [Setup → Lokal](https://ndu.datamonkeys.ai/setup#lokal).
+Am Mac holt ein Befehl im Terminal das Repo und öffnet es in VS Code – was er tut, steht in [`setup-mac.sh`](setup-mac.sh):
 
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/markesdo/ndu-coding-2026/main/setup-mac.sh)" _ NAME-DEINES-REPOS
@@ -14,16 +13,12 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/markesdo/ndu-coding-2026
 ## In 5 Schritten zur laufenden App
 
 1. **Eigenes Repo anlegen:** oben rechts auf **„Use this template“ → „Create a new repository“**. Name: dein Projektname (kleine Buchstaben, mehrere Wörter mit Bindestrich, z. B. `mensa-board`), Owner: dein GitHub-Account, Public. → „Create repository“.
-2. **Codespace starten:** in deinem neuen Repo auf den grünen Button **„Code“ → Tab „Codespaces“ → „Create codespace on main“**. Das dauert beim ersten Mal 2–4 Minuten. Du landest in VS Code im Browser.
-3. **Claude Code anmelden:** unten im **Terminal** eintippen:
-   ```
-   claude
-   ```
-   Es erscheint ein Link → anklicken → mit deinem Claude-Account (Claude Pro) anmelden → Code zurück ins Terminal kopieren. Das machst du nur einmal.
+2. **Repo öffnen:** am Mac mit dem Befehl oben – er installiert auch die Pakete. Unter Windows zuerst [Setup → Lokal von Hand](https://ndu.datamonkeys.ai/setup#lokal-hand) (Git mit Name und E-Mail, Node.js, Claude Code), dann in VS Code *Source Control → Clone Repository → Clone from GitHub* und im Terminal `npm install`.
+3. **Claude starten:** im Terminal von VS Code `claude` eintippen. Beim ersten Mal auf diesem Laptop meldest du dich mit deinem Claude-Account (Claude Pro) an.
 4. **App starten:** in Claude Code eintippen (ja, auf Deutsch, in ganzen Sätzen):
    > Starte die App und sag mir, wie ich sie im Browser öffne.
 
-   Oder klassisch in einem zweiten Terminal: `npm run dev` – rechts öffnet sich automatisch eine Vorschau (Port 3000).
+   Oder klassisch in einem zweiten Terminal: `npm run dev`, dann die Adresse öffnen, die im Terminal steht (meist `http://localhost:3000`).
 5. **Produkt-Brief schreiben:**
    > /ndu-idee
 
@@ -40,7 +35,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/markesdo/ndu-coding-2026
 | `docs/HILFE-ANFRAGE.md` | So holst du dir Hilfe in Teams |
 | `CLAUDE.md` | Die Spielregeln für Claude in diesem Projekt (lies sie – sie sind auch deine) |
 | `.claude/commands/` | Eigene Befehle: `/ndu-idee`, `/ndu-brainstorm`, `/ndu-explain`, `/ndu-check`, `/ndu-commit`, `/ndu-beratung` |
-| `.devcontainer/` | Das Rezept für deine Codespace-Umgebung (nicht anfassen) |
+| `.devcontainer/` | Rezept für einen GitHub Codespace – im Kurs nicht mehr nötig (nicht anfassen; wer doch einen startet, stoppt ihn danach unter GitHub → Codespaces) |
 
 ## Die wichtigsten Befehle
 
@@ -63,9 +58,9 @@ Claude arbeitet in diesem Projekt mit **Sonnet** – das schont dein Pro-Konting
 2. `/clear` und das Problem kleiner formulieren.
 3. `docs/HILFE-ANFRAGE.md` lesen und in Teams posten.
 
-## Nach dem Kurstag
+## Nach dem Arbeiten
 
-Codespace **stoppen** (GitHub → Codespaces → „…“ → Stop), sonst läuft dein Freikontingent weiter. Deine Arbeit ist sicher, solange du gepusht hast (`/ndu-commit`).
+Deine Arbeit ist sicher, solange du gepusht hast (`/ndu-commit`).
 
 ---
-Kurs-Website mit allen Konzepten, Prompts und Checklisten: *(Link folgt)*
+Kurs-Website mit allen Konzepten, Prompts und Checklisten: [ndu.datamonkeys.ai](https://ndu.datamonkeys.ai)

@@ -13,7 +13,7 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 ## Wie du arbeitest
 
 - **Kleine Schritte.** Ein Issue oder ein Wunsch pro Durchgang. Keine „während ich schon dabei bin“-Änderungen.
-- **Ein Issue umsetzen:** Zu Beginn setzt du es auf in Arbeit (in `docs/BACKLOG.md` 🔧, in Linear In Progress). Danach schlägst du kein nächstes Issue vor und beginnst keines. Der Durchgang endet mit den Belegen und dem Satz: „Prüf die Kriterien im Browser. Stimmen alle, sag „fertig“ – dann setze ich das Issue auf fertig, und du machst `/ndu-check`, `/ndu-commit` und `/clear`.“ Hat das Issue Login, Datenbank oder ein Formular berührt, heißt der Satz stattdessen: „… und du machst `/ndu-review`, danach `/ndu-check`, `/ndu-commit` und `/clear`.“ Führ diese Befehle nie selbst aus. Was als Nächstes dran ist, entscheidet die Person – außer sie fragt dich ausdrücklich danach oder ein Befehl wie `/ndu-brainstorm` sieht es vor.
+- **Ein Issue umsetzen:** Zu Beginn setzt du es auf in Arbeit (in `docs/BACKLOG.md` 🔧, in Linear In Progress). Danach schlägst du kein nächstes Issue vor und beginnst keines. Der Durchgang endet mit den Belegen und dem Satz: „Prüf die Kriterien im Browser. Stimmen alle, sag „fertig“ – dann setze ich das Issue auf fertig (im Team mit Pull Request: siehe „Issues in Linear“), und du machst `/ndu-check`, `/ndu-commit` und `/clear`.“ Hat das Issue Login, Datenbank oder ein Formular berührt, heißt der Satz stattdessen: „… und du machst `/ndu-review`, danach `/ndu-check`, `/ndu-commit` und `/clear`.“ Führ diese Befehle nie selbst aus. Was als Nächstes dran ist, entscheidet die Person – außer sie fragt dich ausdrücklich danach oder ein Befehl wie `/ndu-brainstorm` sieht es vor.
 - **Erst verstehen, dann bauen.** Ist ein Issue unklar oder fehlt eine Entscheidung, frag zuerst nach. Ist es klar, setz es direkt um – ohne separaten Plan.
 - **Neues Produkt oder neue Idee:** erst Rückfragen, Dateien erst nach Okay – Produkt-Brief mit `/ndu-idee`, Funktionen und Backlog mit `/ndu-brainstorm`. Backlog nach Linear umziehen: `/ndu-linear`.
 - **Platzhalter „Mein Projekt“:** So heißt das Produkt, bis der Produkt-Brief steht. `/ndu-idee` ersetzt den Namen danach überall.
@@ -51,7 +51,7 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 - `src/components/` — wiederverwendbare UI-Bausteine
 - `src/lib/` — Hilfsfunktionen, später der Supabase-Client
 - `docs/PRODUKT.md` — Produkt-Brief, eine Seite (schreibt die Person mit dir gemeinsam: `/ndu-idee`, MVP aus `/ndu-brainstorm`). Lies ihn (falls vorhanden), bevor du ein Issue umsetzt. Er lebt: Stellt sich beim Bauen oder Testen eine Annahme daraus als falsch heraus, sag es und schlag die Änderung vor (inkl. Stand-Zeile).
-- `docs/BACKLOG.md` — Issues (Ziel, Nicht im Umfang, Akzeptanzkriterien, Fertig wenn), priorisiert. Steht dort „Issues: Linear“, liegen sie in Linear, und die Datei enthält nur den Verweis.
+- `docs/BACKLOG.md` — Issues (Ziel, Nicht im Umfang, Akzeptanzkriterien, Fertig wenn), priorisiert. Steht dort eine Zeile, die mit „Issues: Linear ·“ beginnt, liegen sie in Linear, und die Datei enthält nur den Verweis mit einer Zuordnung alte Nummer → Kennung.
 - `docs/ENTSCHEIDUNGEN.md` — Entscheidungen, die du dir merken sollst (hier eintragen, wenn etwas festgelegt wird)
 
 ## Begriffe, die die Person kennt
@@ -60,11 +60,11 @@ Frontend, Backend, Datenbank, API, Hosting · Repository, Commit, Push · Kontex
 
 ## Issues in Linear
 
-Steht in `docs/BACKLOG.md` „Issues: Linear“, liegen die Issues in Linear und nicht in der Datei. Dann gilt:
+Steht in `docs/BACKLOG.md` eine Zeile, die mit „Issues: Linear ·“ beginnt, liegen die Issues in Linear und nicht in der Datei. Gemeint sind dann nur die Issues im Projekt aus dieser Zeile (ohne Projekt: im Team) – andere Projekte im selben Team gehören anderen. Dann gilt:
 
 - Ein Issue holst du per Kennung (z. B. LEI-5) über den Linear-MCP – nie aus dem Gedächtnis. Ist der MCP nicht verbunden, sag es und erklär: `/mcp` → *plugin:linear:linear* → *Authenticate*.
 - Zu Beginn: Status In Progress, der angemeldeten Person zugewiesen. Arbeitest du auf einem Branch, beginnt sein Name mit der Kennung in Kleinbuchstaben (z. B. `lei-5-beschreibung`).
-- Am Ende: die Belege je Kriterium zusätzlich als Kommentar ins Issue. Gibt es einen Pull Request, kommt sein Link in den Kommentar und das Issue auf In Review (gibt es den Status nicht, bleibt es auf In Progress). Done erst, wenn die Person „fertig“ sagt – arbeitet ein Team im Repo, erst nach dem Zusammenführen.
+- Am Ende: die Belege je Kriterium zusätzlich als Kommentar ins Issue. Sagt die Person „fertig“: Done. Arbeitet ihr mit Pull Requests (im Team): Wenn du den Pull Request erstellst, kommt sein Link in den Kommentar und das Issue auf In Review (gibt es den Status nicht, bleibt es auf In Progress); Done erst nach dem Zusammenführen – mit GitHub-Verbindung setzt Linear das selbst.
 - Anlegen nur nach gezeigter Liste und Okay, vorher nach gleichem Titel suchen. Format der Beschreibung: Ziel, Nicht im Umfang, Akzeptanzkriterien (Gegeben … wenn … dann …), Fertig, wenn.
 - Nie löschen – stattdessen Canceled mit einem Kommentar, warum. Nie Issues ändern, die jemand anderem zugewiesen sind.
 - `docs/PRODUKT.md` und `docs/ENTSCHEIDUNGEN.md` bleiben im Repo; Ideen für Später stehen im Brief, nicht in Linear.

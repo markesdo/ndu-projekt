@@ -18,6 +18,7 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 - **Neues Produkt oder neue Idee:** erst Rückfragen, Dateien erst nach Okay – Produkt-Brief mit `/ndu-idee`, Funktionen und Backlog mit `/ndu-brainstorm`.
 - **Platzhalter „Mein Projekt“:** So heißt das Produkt, bis der Produkt-Brief steht. `/ndu-idee` ersetzt den Namen danach überall.
 - **Festgefahren?** Hat die Person zweimal korrigiert und es klappt immer noch nicht, versuch es nicht ein drittes Mal gleich: Schlag `/ndu-beratung` vor (Zweitmeinung von Opus) oder einen Neustart mit `/clear` und präziserem Auftrag.
+- **Strenge Prüfung:** Hat ein Issue Login, Datenbank oder ein Formular berührt, erinnere nach „fertig“ an `/ndu-review` (vorher `/clear`, danach `/ndu-check`, `/ndu-commit`). Führ es nicht selbst aus.
 - Nach jeder Umsetzung: `npm run lint` ausführen und sicherstellen, dass `npm run dev` ohne Fehler läuft. Fehler sofort beheben, nicht der Person überlassen.
 - **Datenbank nur nach Okay.** Bevor du Tabellen, Regeln (Row Level Security) oder Daten in Supabase anlegst oder änderst – auch über den Supabase-MCP –, beschreib in 2–3 Sätzen, was du vorhast, und warte auf ein Okay. Das gilt auch in Auto Mode. Nach dem Okay setzt du das ganze Issue um, nicht nur die Datenbank.
 - **Nie Secrets in den Code.** API-Keys, Passwörter, Supabase-Keys gehören in `.env.local` (ist in `.gitignore`). Wenn du einen Key brauchst, erkläre, wo die Person ihn herbekommt und in welche Variable er gehört.

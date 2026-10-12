@@ -34,7 +34,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/markesdo/ndu-coding-2026
 | `docs/BACKLOG.md` | Issues mit Akzeptanzkriterien – deine Arbeitsliste |
 | `docs/HILFE-ANFRAGE.md` | So holst du dir Hilfe in Teams |
 | `CLAUDE.md` | Die Spielregeln für Claude in diesem Projekt (lies sie – sie sind auch deine) |
-| `.claude/commands/` | Eigene Befehle: `/ndu-idee`, `/ndu-brainstorm`, `/ndu-explain`, `/ndu-check`, `/ndu-commit`, `/ndu-beratung` |
+| `.claude/commands/` | Eigene Befehle: `/ndu-idee`, `/ndu-brainstorm`, `/ndu-explain`, `/ndu-check`, `/ndu-commit`, `/ndu-review`, `/ndu-beratung` |
 | `.devcontainer/` | Rezept für einen GitHub Codespace – im Kurs nicht mehr nötig (nicht anfassen; wer doch einen startet, stoppt ihn danach unter GitHub → Codespaces) |
 
 ## Die wichtigsten Befehle
@@ -48,6 +48,7 @@ Diese Befehle sind **nicht in Claude Code eingebaut** – sie gehören zu diesem
 | `/ndu-explain` | Du willst verstehen, was gerade im Projekt passiert |
 | `/ndu-check` | Du willst wissen, ob alles läuft und nichts Geheimes im Code steckt |
 | `/ndu-commit` | Du hast etwas fertig und willst es sichern (Git = Undo-Knopf) |
+| `/ndu-review` | Nach einem Issue mit Login, Datenbank oder Formular und vor der Demo: Ein frischer Prüfer sucht Secrets, offene Zugriffsregeln und Stolpersteine für Fremde – du entscheidest, was behoben wird |
 | `/ndu-beratung` | Du planst etwas Größeres, Claude dreht sich im Kreis oder du willst vor einem PR eine Zweitmeinung: Ein stärkeres Modell (Opus) schaut in einem eigenen Subagenten drauf |
 
 Claude arbeitet in diesem Projekt mit **Sonnet** – das schont dein Pro-Kontingent. Wie viel davon verbraucht ist, zeigt `/usage`.

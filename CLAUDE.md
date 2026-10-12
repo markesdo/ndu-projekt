@@ -13,7 +13,7 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 ## Wie du arbeitest
 
 - **Kleine Schritte.** Ein Issue oder ein Wunsch pro Durchgang. Keine „während ich schon dabei bin“-Änderungen.
-- **Ein Issue umsetzen:** Zu Beginn setzt du es auf in Arbeit (in `docs/BACKLOG.md` 🔧, in Linear In Progress). Danach schlägst du kein nächstes Issue vor und beginnst keines. Der Durchgang endet mit den Belegen und dem Satz: „Prüf die Kriterien im Browser. Stimmen alle, sag „fertig“ – dann setze ich das Issue auf fertig (im Team mit Pull Request: siehe „Issues in Linear“), und du machst `/ndu-check`, `/ndu-commit` und `/clear`.“ Hat das Issue Login, Datenbank oder ein Formular berührt, heißt der Satz stattdessen: „… und du machst `/ndu-review`, danach `/ndu-check`, `/ndu-commit` und `/clear`.“ Führ diese Befehle nie selbst aus. Was als Nächstes dran ist, entscheidet die Person – außer sie fragt dich ausdrücklich danach oder ein Befehl wie `/ndu-brainstorm` sieht es vor.
+- **Ein Issue umsetzen:** Zu Beginn setzt du es auf in Arbeit (in `docs/BACKLOG.md` 🔧, in Linear In Progress). Danach schlägst du kein nächstes Issue vor und beginnst keines. Der Durchgang endet mit den Belegen und dem Satz: „Prüf die Kriterien im Browser. Stimmen alle, sag „fertig“ – dann setze ich das Issue auf fertig (im Team mit Pull Request: siehe `docs/LINEAR.md`), und du machst `/ndu-check`, `/ndu-commit` und `/clear`.“ Hat das Issue Login, Datenbank oder ein Formular berührt, heißt der Satz stattdessen: „… und du machst `/ndu-review`, danach `/ndu-check`, `/ndu-commit` und `/clear`.“ Führ diese Befehle nie selbst aus. Was als Nächstes dran ist, entscheidet die Person – außer sie fragt dich ausdrücklich danach oder ein Befehl wie `/ndu-brainstorm` sieht es vor.
 - **Erst verstehen, dann bauen.** Ist ein Issue unklar oder fehlt eine Entscheidung, frag zuerst nach. Ist es klar, setz es direkt um – ohne separaten Plan.
 - **Neues Produkt oder neue Idee:** erst Rückfragen, Dateien erst nach Okay – Produkt-Brief mit `/ndu-idee`, Funktionen und Backlog mit `/ndu-brainstorm`. Backlog nach Linear umziehen: `/ndu-linear`.
 - **Platzhalter „Mein Projekt“:** So heißt das Produkt, bis der Produkt-Brief steht. `/ndu-idee` ersetzt den Namen danach überall.
@@ -22,7 +22,7 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 - **Datenbank nur nach Okay.** Bevor du Tabellen, Regeln (Row Level Security) oder Daten in Supabase anlegst oder änderst – auch über den Supabase-MCP –, beschreib in 2–3 Sätzen, was du vorhast, und warte auf ein Okay. Das gilt auch in Auto Mode. Nach dem Okay setzt du das ganze Issue um, nicht nur die Datenbank.
 - **Nie Secrets in den Code.** API-Keys, Passwörter, Supabase-Keys gehören in `.env.local` (ist in `.gitignore`). Wenn du einen Key brauchst, erkläre, wo die Person ihn herbekommt und in welche Variable er gehört.
 - **Nie `git push --force`, nie `rm -rf`, nie `.env*`-Dateien committen.**
-- Die Akzeptanzkriterien des Issues – aus `docs/BACKLOG.md` oder aus Linear (siehe unten) – sind die Definition of Done. Wenn ein Issue umgesetzt ist, geh die Kriterien einzeln durch und zeig für jedes einen **Beleg**: was du geprüft hast (Build, Test, Abfrage) und was die Person im Browser sehen soll. Behaupte nichts, was du nicht geprüft hast.
+- Die Akzeptanzkriterien des Issues – aus `docs/BACKLOG.md` oder aus Linear (siehe `docs/LINEAR.md`) – sind die Definition of Done. Wenn ein Issue umgesetzt ist, geh die Kriterien einzeln durch und zeig für jedes einen **Beleg**: was du geprüft hast (Build, Test, Abfrage) und was die Person im Browser sehen soll. Behaupte nichts, was du nicht geprüft hast.
 
 ## Tech-Stack (nicht ohne Rücksprache ändern)
 
@@ -52,22 +52,13 @@ Dieses Projekt gehört einer/einem Studierenden der NDU (Master Management by In
 - `src/lib/` — Hilfsfunktionen, später der Supabase-Client
 - `docs/PRODUKT.md` — Produkt-Brief, eine Seite (schreibt die Person mit dir gemeinsam: `/ndu-idee`, MVP aus `/ndu-brainstorm`). Lies ihn (falls vorhanden), bevor du ein Issue umsetzt. Er lebt: Stellt sich beim Bauen oder Testen eine Annahme daraus als falsch heraus, sag es und schlag die Änderung vor (inkl. Stand-Zeile).
 - `docs/BACKLOG.md` — Issues (Ziel, Nicht im Umfang, Akzeptanzkriterien, Fertig wenn), priorisiert. Steht dort eine Zeile, die mit „Issues: Linear ·“ beginnt, liegen sie in Linear, und die Datei enthält nur den Verweis mit einer Zuordnung alte Nummer → Kennung.
+- `docs/LINEAR.md` — Regeln, wenn die Issues in Linear liegen (gilt nur mit der Zeile „Issues: Linear ·“ in `docs/BACKLOG.md`)
 - `docs/ENTSCHEIDUNGEN.md` — Entscheidungen, die du dir merken sollst (hier eintragen, wenn etwas festgelegt wird)
 
 ## Begriffe, die die Person kennt
 
 Frontend, Backend, Datenbank, API, Hosting · Repository, Commit, Push · Kontextfenster, Auto Mode · Produkt-Brief (auch PRD), Issue, Akzeptanzkriterium, MVP · Supabase, Vercel, `.env`. Alles andere kurz erklären.
 
-## Issues in Linear
-
-Steht in `docs/BACKLOG.md` eine Zeile, die mit „Issues: Linear ·“ beginnt, liegen die Issues in Linear und nicht in der Datei. Gemeint sind dann nur die Issues im Projekt aus dieser Zeile (ohne Projekt: im Team) – andere Projekte im selben Team gehören anderen. Dann gilt:
-
-- Ein Issue holst du per Kennung (z. B. LEI-5) über den Linear-MCP – nie aus dem Gedächtnis. Ist der MCP nicht verbunden, sag es und erklär: `/mcp` → *plugin:linear:linear* → *Authenticate*.
-- Zu Beginn: Status In Progress, der angemeldeten Person zugewiesen. Arbeitest du auf einem Branch, beginnt sein Name mit der Kennung in Kleinbuchstaben (z. B. `lei-5-beschreibung`).
-- Am Ende: die Belege je Kriterium zusätzlich als Kommentar ins Issue. Sagt die Person „fertig“: Done. Arbeitet ihr mit Pull Requests (im Team): Wenn du den Pull Request erstellst, kommt sein Link in den Kommentar und das Issue auf In Review (gibt es den Status nicht, bleibt es auf In Progress); Done erst nach dem Zusammenführen – mit GitHub-Verbindung setzt Linear das selbst.
-- Anlegen, Canceled setzen oder Issues umsortieren nur nach gezeigter Liste und Okay – das gilt auch in Auto Mode. Vor dem Anlegen nach gleichem Titel suchen. Format der Beschreibung: Ziel, Nicht im Umfang, Akzeptanzkriterien (Gegeben … wenn … dann …), Fertig, wenn.
-- Nie löschen – stattdessen Canceled mit einem Kommentar, warum. Nie Issues ändern, die jemand anderem zugewiesen sind.
-- `docs/PRODUKT.md` und `docs/ENTSCHEIDUNGEN.md` bleiben im Repo; Ideen für Später stehen im Brief, nicht in Linear.
-
 @AGENTS.md
 @docs/ENTSCHEIDUNGEN.md
+@docs/LINEAR.md

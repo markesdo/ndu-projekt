@@ -31,6 +31,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/markesdo/ndu-coding-2026
 | `src/app/` | Die Seiten der App (eine Mappe = eine URL) |
 | `src/components/` | Wiederverwendbare UI-Bausteine |
 | `docs/PRODUKT-VORLAGE.md` | Vorlage für deinen Produkt-Brief (eine Seite, lebt mit dem Produkt) |
+| `docs/LINEAR.md` | Regeln für Claude, wenn eure Issues in Linear liegen – gilt erst nach `/ndu-linear` |
 | `docs/BACKLOG.md` | Issues mit Akzeptanzkriterien – deine Arbeitsliste. Im Team liegt sie in Linear, dann steht hier nur der Verweis |
 | `docs/HILFE-ANFRAGE.md` | So holst du dir Hilfe in Teams |
 | `CLAUDE.md` | Die Spielregeln für Claude in diesem Projekt (lies sie – sie sind auch deine) |

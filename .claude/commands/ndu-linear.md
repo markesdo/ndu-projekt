@@ -14,7 +14,7 @@ Wir ziehen den Backlog nach Linear um. Team: $ARGUMENTS (wenn leer: fragen, soba
 5. **Dateien umstellen** (gehört zum Okay aus Schritt 3):
    - `docs/BACKLOG.md`: Die Überschrift und alle Zeilen, die mit `>` beginnen, bleiben. Darunter statt der Issues genau diese Zeile: `Issues: Linear · Team [Kennung] · Projekt [Name]` (ohne Projekt: nur Team), dann die Adresse des Teams in Linear und eine Tabelle alte Nummer → Kennung, in der alten Reihenfolge. Die alten Issue-Texte entfallen – sie stehen jetzt in Linear und im Git-Verlauf.
    - `docs/PRODUKT.md`, Abschnitt 5: hinter jedes MVP-Stichwort die Kennung in Klammern.
-   - `CLAUDE.md`: Fehlt der Abschnitt „Issues in Linear“, häng ihn vor den Zeilen an, die mit `@` beginnen – Wortlaut unten. Ändere sonst nichts an `CLAUDE.md`.
+   - `CLAUDE.md`: Fehlt der Abschnitt „Issues in Linear“, häng ihn vor den Zeilen an, die mit `@` beginnen – Wortlaut unten. Ältere Fassungen sprechen an zwei Stellen nur von der Datei; passe sie an, wenn du sie findest: „setzt du es im Backlog auf 🔧 in Arbeit“ wird „setzt du es auf in Arbeit (in `docs/BACKLOG.md` 🔧, in Linear In Progress)“, und „Akzeptanzkriterien aus `docs/BACKLOG.md` sind die Definition of Done“ wird „Die Akzeptanzkriterien des Issues – aus `docs/BACKLOG.md` oder aus Linear (siehe unten) – sind die Definition of Done“. Ändere sonst nichts an `CLAUDE.md`.
    - `docs/ENTSCHEIDUNGEN.md`: eine Zeile mit heutigem Datum: „Issues liegen in Linear, Team [Kennung] — Backlog im Team statt in der Datei“.
 6. **Abschluss.** Zeig mir die Kennungen mit Titel. Bitte mich, sie in Linear kurz anzusehen. Sag: Als Nächstes `/ndu-commit`, danach startet ein Issue mit „Setze [Kennung] um“. Führ `/ndu-commit` nicht selbst aus.
 
@@ -28,7 +28,7 @@ Steht in `docs/BACKLOG.md` eine Zeile, die mit „Issues: Linear ·“ beginnt, 
 - Ein Issue holst du per Kennung (z. B. LEI-5) über den Linear-MCP – nie aus dem Gedächtnis. Ist der MCP nicht verbunden, sag es und erklär: `/mcp` → *plugin:linear:linear* → *Authenticate*.
 - Zu Beginn: Status In Progress, der angemeldeten Person zugewiesen. Arbeitest du auf einem Branch, beginnt sein Name mit der Kennung in Kleinbuchstaben (z. B. `lei-5-beschreibung`).
 - Am Ende: die Belege je Kriterium zusätzlich als Kommentar ins Issue. Sagt die Person „fertig“: Done. Arbeitet ihr mit Pull Requests (im Team): Wenn du den Pull Request erstellst, kommt sein Link in den Kommentar und das Issue auf In Review (gibt es den Status nicht, bleibt es auf In Progress); Done erst nach dem Zusammenführen – mit GitHub-Verbindung setzt Linear das selbst.
-- Anlegen nur nach gezeigter Liste und Okay, vorher nach gleichem Titel suchen. Format der Beschreibung: Ziel, Nicht im Umfang, Akzeptanzkriterien (Gegeben … wenn … dann …), Fertig, wenn.
+- Anlegen, Canceled setzen oder Issues umsortieren nur nach gezeigter Liste und Okay – das gilt auch in Auto Mode. Vor dem Anlegen nach gleichem Titel suchen. Format der Beschreibung: Ziel, Nicht im Umfang, Akzeptanzkriterien (Gegeben … wenn … dann …), Fertig, wenn.
 - Nie löschen – stattdessen Canceled mit einem Kommentar, warum. Nie Issues ändern, die jemand anderem zugewiesen sind.
 - `docs/PRODUKT.md` und `docs/ENTSCHEIDUNGEN.md` bleiben im Repo; Ideen für Später stehen im Brief, nicht in Linear.
 ```

@@ -20,7 +20,7 @@ Was ist heute mühsam, langsam oder frustrierend? Wie wird es heute gelöst (Wha
 Drei Dinge, die bewusst wegbleiben. Das ist der wichtigste Abschnitt.
 
 ## 5. Was gehört ins MVP? (3–5 Stichworte)
-Kommt aus dem Brainstorming mit Claude (`/ndu-brainstorm`). Nur, was für den ersten nützlichen Durchlauf nötig ist. Jedes Stichwort wird ein Issue in `docs/BACKLOG.md` – Ziel, Grenzen und Akzeptanzkriterien stehen dort, nicht hier.
+Kommt aus dem Brainstorming mit Claude (`/ndu-brainstorm`). Nur, was für den ersten nützlichen Durchlauf nötig ist. Jedes Stichwort wird ein Issue in `docs/BACKLOG.md` – oder in Linear, dann mit Kennung in Klammern (`/ndu-linear`). Ziel, Grenzen und Akzeptanzkriterien stehen dort, nicht hier.
 
 **Später:** Ideen aus dem Brainstorming, die warten.
 

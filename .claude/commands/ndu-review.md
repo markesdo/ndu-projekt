@@ -5,7 +5,7 @@ argument-hint: "[Bereich, optional – z. B. „nur die Tabelle anfragen“]"
 
 Lass das Projekt von jemandem prüfen, der den Code nicht geschrieben hat. Bereich: $ARGUMENTS (wenn leer: das ganze Projekt).
 
-1. **Auftrag schreiben.** Für den Prüfer, ohne dieses Gespräch verständlich: das Produkt in einem Satz (aus `docs/PRODUKT.md`), die Issues mit Status „fertig“ oder „in Arbeit“ aus `docs/BACKLOG.md`, die Regeln zu Keys und Datenbank aus `CLAUDE.md`. Fehlt der Brief oder ist noch kein Issue fertig, prüft er, was im Code schon da ist.
+1. **Auftrag schreiben.** Für den Prüfer, ohne dieses Gespräch verständlich: das Produkt in einem Satz (aus `docs/PRODUKT.md`), die Issues mit Status „fertig“ oder „in Arbeit“ aus `docs/BACKLOG.md` – steht dort eine Zeile, die mit „Issues: Linear ·“ beginnt, die mit Status In Progress, In Review oder Done im Projekt aus dieser Zeile, die du selbst über den Linear-MCP liest –, die Regeln zu Keys und Datenbank aus `CLAUDE.md`. Fehlt der Brief oder ist noch kein Issue fertig, prüft er, was im Code schon da ist.
 2. **Prüfen lassen.** Starte damit einen Subagenten vom Typ **Plan** mit dem Modell **Sonnet** (Agent-Werkzeug: `subagent_type: Plan`, `model: sonnet`). Er darf nur lesen und suchen und nichts verändern:
    - keine Datei, kein Commit, kein `git stash`, `git restore`, `git checkout`, keine Installation;
    - beim Supabase-MCP nur lesen: `list_tables`, `get_advisors` und `execute_sql` ausschließlich mit `select` (z. B. auf `pg_policies`) – nie `apply_migration`, nie SQL, das schreibt. Ist der MCP nicht verbunden: nur den Code;

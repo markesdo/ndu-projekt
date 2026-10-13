@@ -31,10 +31,11 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/markesdo/ndu-coding-2026
 | `src/app/` | Die Seiten der App (eine Mappe = eine URL) |
 | `src/components/` | Wiederverwendbare UI-Bausteine |
 | `docs/PRODUKT-VORLAGE.md` | Vorlage für deinen Produkt-Brief (eine Seite, lebt mit dem Produkt) |
-| `docs/BACKLOG.md` | Issues mit Akzeptanzkriterien – deine Arbeitsliste |
+| `docs/LINEAR.md` | Regeln für Claude, wenn eure Issues in Linear liegen – gilt erst nach `/ndu-linear` |
+| `docs/BACKLOG.md` | Issues mit Akzeptanzkriterien – deine Arbeitsliste. Im Team liegt sie in Linear, dann steht hier nur der Verweis |
 | `docs/HILFE-ANFRAGE.md` | So holst du dir Hilfe in Teams |
 | `CLAUDE.md` | Die Spielregeln für Claude in diesem Projekt (lies sie – sie sind auch deine) |
-| `.claude/commands/` | Eigene Befehle: `/ndu-idee`, `/ndu-brainstorm`, `/ndu-explain`, `/ndu-check`, `/ndu-commit`, `/ndu-review`, `/ndu-beratung` |
+| `.claude/commands/` | Eigene Befehle: `/ndu-idee`, `/ndu-brainstorm`, `/ndu-linear`, `/ndu-explain`, `/ndu-check`, `/ndu-commit`, `/ndu-review`, `/ndu-beratung` |
 | `.devcontainer/` | Rezept für einen GitHub Codespace – im Kurs nicht mehr nötig (nicht anfassen; wer doch einen startet, stoppt ihn danach unter GitHub → Codespaces) |
 
 ## Die wichtigsten Befehle
@@ -45,6 +46,7 @@ Diese Befehle sind **nicht in Claude Code eingebaut** – sie gehören zu diesem
 |---|---|
 | `/ndu-idee` | Du startest ein neues Produkt: kurzes Interview, dann schreibt Claude den Produkt-Brief |
 | `/ndu-brainstorm` | Nach dem Brief: Claude schlägt Funktionen vor – auch solche, an die du nicht gedacht hast –, du entscheidest MVP / Später / Nein, dann schreibt Claude den Backlog |
+| `/ndu-linear` | Du arbeitest mit Linear: Claude prüft die Verbindung und zieht deinen Backlog aus `docs/BACKLOG.md` dorthin um – danach liegen die Issues in Linear |
 | `/ndu-explain` | Du willst verstehen, was gerade im Projekt passiert |
 | `/ndu-check` | Du willst wissen, ob alles läuft und nichts Geheimes im Code steckt |
 | `/ndu-commit` | Du hast etwas fertig und willst es sichern (Git = Undo-Knopf) |

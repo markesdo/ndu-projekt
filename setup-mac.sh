@@ -13,7 +13,7 @@ set -euo pipefail
 
 NODE_VERSION=24.21.0
 GH_VERSION=2.102.0
-PLUGINS=(frontend-design superpowers vercel playwright linear)
+PLUGINS=(frontend-design superpowers vercel playwright linear figma)
 # Für Tests überschreibbar.
 APPS_DIR="${NDU_APPS_DIR:-/Applications}"
 # Nicht ~/Documents: Das synchronisiert iCloud oft – bei node_modules langsam und fehleranfällig.
